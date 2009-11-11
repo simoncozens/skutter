@@ -1,0 +1,11 @@
+Account manager needs to exist
+Mark all as read (folder, global)
+Move to next unread
+Accounts should allow: background change, confirm checkbox
+Identica threading (don't know what this means)
+Make "whither" actually do something
+Visual layout is horrific - get an XUL expert to look at it. :(
+Implement OAuth. TwitterHelper doesn't. :(
+Lists and groups
+Actions on a skut (retweet, reply, etc.)
+Searches
