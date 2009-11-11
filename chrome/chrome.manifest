@@ -1,0 +1,11 @@
+content skutter file:skutter/
+content navigator file:skutter/
+content branding file:branding/
+locale branding en-US locale/branding/
+
+skin skutter default file:skin/
+
+locale skutter en-US locale/en-US/skutter/
+# locale skutter ja-JP locale/ja-JP/skutter/
+
+resource modules modules/

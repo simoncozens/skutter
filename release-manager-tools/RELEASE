@@ -1,0 +1,32 @@
+BUILDING THE RELEASE
+--------------------
+
+OS X
+    * make dist-osx
+    * Get a recent xulrunner
+    * Open songbee.pmdoc
+    * Update the location of xulrunner
+    * Update the build number, and hit build! - this creates songbee.pkg
+    * Run "sh build-dmg.sh songbee-0.1alpha Songbee" to produce a .dmg file
+
+Windows
+
+    make
+    make release-win
+    Cross fingers
+
+Linux/Unix
+
+    make release-unix
+
+UPDATING THE WEB SITE
+---------------------
+
+* Update the manual:
+  % make htmlbook
+  % cd html
+  % perl -pi -e 's/width="\d+"//g' *
+  % scp -r * hosted.simon-cozens.org:/web/songbee.simon-cozens.org/manual/
+
+REGRESSION TESTS
+----------------

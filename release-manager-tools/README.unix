@@ -1,0 +1,26 @@
+Songbee 2.1
+-----------
+
+SongBee is presentation software tailored to projecting song words in
+Churches. It's probably also useful for Karaoke if the words aren't
+included in the music (like if you have a live band rather than a
+video).
+
+Requirements
+------------
+
+To install and run songbee, you will need the latest version of
+xulrunner from the Mozilla project. You can pick this up from
+http://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-trunk/
+or, possibly, from your Unix distribution if it's recent enough.
+
+Installing
+----------
+
+Run install.sh as root to install.
+
+Running
+-------
+
+Just run "songbee".
+

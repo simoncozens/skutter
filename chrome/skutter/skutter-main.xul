@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://skutter/skin/skutter.css" type="text/css"?>
+<!DOCTYPE window [
+<!ENTITY % SkutterDTD SYSTEM "chrome://skutter/locale/skutter.dtd" >
+%SkutterDTD;
+]>
+<window id="skutter-mail" title="&skutter.appname;"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        onload="loadSources();"
+        minwidth="500"
+        minheight="300">
+
+<script src="chrome://skutter/content/js/skutter-utilities.js"/>
+<script src="chrome://skutter/content/js/accounts.js"/>
+<script src="chrome://skutter/content/js/skutter-sql.js"/>
+<script src="chrome://skutter/content/js/skutter.js"/>
+<toolbox>
+<menubar id="main-menu">
+    <menu id="file-menu" label="&skutter.menu.file;">
+        <menupopup id="file-popup">
+            <menuitem id="aboutName" label="&skutter.menu.about;" oncommand="aboutwindow()"/>
+            <menuitem label="&skutter.menu.exit;" oncommand="window.close()"/>
+        </menupopup>
+    </menu>
+    <menu id="tools-menu" label="Tools">
+        <menupopup id="tools-popup">
+            <menuitem label="Preferences" oncommand="preferences()"/>
+            <menuitem label="Extensions" oncommand="extensions()"/>
+            <menuitem label="Debugger" oncommand="opendebugger()"/>
+            <menuitem label="Check for updates..." oncommand="checkUpdates()"/>
+            <menuseparator/>
+            <menuitem label="Account Manager" oncommand="accountmanager()"/>
+        </menupopup>
+    </menu>
+</menubar>
+</toolbox>
+    <toolbar alignment="center">
+        <toolbaritem flex="1">
+            <textbox flex="1" id="skut"/>
+        </toolbaritem>
+        <toolbarbutton type="menu-button" label="Post" oncommand="post()">
+                <menupopup id="whither">
+                    <menuitem label="This account" selected="true"/>
+                    <menuitem label="All accounts"/>
+                    <menuseparator/>
+                </menupopup>
+        </toolbarbutton>
+        <toolbaritem>
+            <hbox width="30" alignment="center" packing="center">
+            <vbox alignment="center" width="16" height="16">
+            <spacer flex="1"/>
+            <image id="throbber" hidden="true" src="throbber.gif"/>
+            <spacer flex="1"/>
+            </vbox>
+            </hbox>
+        </toolbaritem>
+    </toolbar>
+    <tabbox flex="1">
+        <tabs id="tabs">
+        </tabs>
+        <tabpanels id="tabpanels">
+        </tabpanels>
+    </tabbox>
+<script>
+    setupTabs();
+   function preferences() {
+        window.openDialog("chrome://global/content/config.xul",
+        "preferences", "chrome,centerscreen");
+        // window.openDialog("chrome://skutter/content/preferences.xul",
+        // "preferences", "chrome,centerscreen,modal,titlebar");
+    }
+
+    function extensions() {
+        managedOpen( "Extension:Manager", "chrome://mozapps/content/extensions/extensions.xul?type=extensions" );
+    }
+    function aboutwindow() {
+        window.openDialog("chrome://skutter/content/about-window.xul",
+        "preferences", "chrome, dialog");
+    }
+    function opendebugger() { 
+        managedOpen( "global:console", "chrome://global/content/console.xul" );
+    }
+    function accountmanager() { 
+         window.openDialog("chrome://skutter/content/accountmanager.xul",
+                           "AccountManager",
+                           "chrome,centerscreen,modal,titlebar");
+    }
+
+</script>
+</window>

@@ -1,0 +1,4 @@
+<!ENTITY aboutwindow.version "Version">
+<!ENTITY aboutwindow.build   "build">
+<!ENTITY aboutwindow.mozilla "running on Mozilla platform version">
+<!ENTITY aboutwindow.windowtitle "About Songbee">

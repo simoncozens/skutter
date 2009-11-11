@@ -1,0 +1,35 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="about-window.css" type="text/css"?>
+<!DOCTYPE window [
+<!ENTITY % SkutterDTD SYSTEM "chrome://skutter/locale/skutter.dtd" >
+<!ENTITY % AboutWindowDTD SYSTEM "chrome://skutter/locale/about-window.dtd" >
+%SkutterDTD;
+%AboutWindowDTD;
+]>
+
+<window id="about-window" title="&aboutwindow.windowtitle;"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  minwidth="250"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+>
+<keyset>
+  <key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/>
+</keyset>
+<html:div id="main">
+<html:img src="chrome://branding/content/about.png"/>
+<html:p id="sb"> &skutter.appname; </html:p>
+<html:p> &aboutwindow.version; <label id="skutterversion"/> 
+(&aboutwindow.build; <label id="buildid"/>) &aboutwindow.mozilla; <label id="platformversion"/>
+(&aboutwindow.build; <label id="platformbuildid"/>)</html:p>
+<button label="OK" oncommand="window.close();"/>
+</html:div>
+    <script> 
+var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+                        .getService(Components.interfaces.nsIXULAppInfo);
+document.getElementById("skutterversion").setAttribute("value", appInfo.version);
+document.getElementById("buildid").setAttribute("value", appInfo.appBuildID);
+document.getElementById("platformversion").setAttribute("value", appInfo.platformVersion);
+document.getElementById("platformbuildid").setAttribute("value", appInfo.platformBuildID);
+    </script>
+</window>

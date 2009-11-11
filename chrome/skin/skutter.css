@@ -1,0 +1,12 @@
+@import url(chrome://global/skin/);
+
+.skutcanvas { overflow: scroll; max-height: 200px; }
+listbox { min-width: 120px; max-width: 200px }
+.unread { background: #fdd; }
+.read { background: #ddf; }
+.folderitem { padding: 5px; border: 1px dotted #444; max-width: 400px; min-width: 200px;}
+.folderitem img { float:right; padding: 5px; }
+.labels { color: #222; font-weight: bold; }
+.folderitem br { height: 10px }
+.auxinfo { padding-top: 10px; font-size: 90%; font-style: italic }
+.hasunread { font-weight: bold }

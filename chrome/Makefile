@@ -1,0 +1,3 @@
+FILES = $(shell find locale -type f) # Lots could change...
+locale.jar: $(FILES)
+	zip -r locale.jar `find locale -type f | grep -v .svn`

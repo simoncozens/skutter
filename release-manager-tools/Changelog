@@ -1,0 +1,71 @@
+
+What's new in Songbee 2.1
+
+* Songbee will notify you when new versions are available and help you to
+  upgrade.
+
+* Songbee can now display Bible passages from SBB (SongBee Bible) files.
+ : Songbee comes with several out-of-copyright Bibles, and allows you to
+   import your own SBB files.
+ : The SBB Bible format also supports Japanese Bibles like the
+   Shinkayaku version, if you know where to get one from...
+
+* Various visual fixes have been made to the projector display,
+  including hanging indents on long lines.
+  : On the console display, each part of the song also displays the
+    accelerator key to jump to it.
+
+* You can view and save a report of how many times each song has been
+  sung, for copyright purposes.
+
+* A pretty new icon!
+
+* The in-worship searching facility has been improved:
+ : The preview pane is kept up to date with the best matched song.
+ : Pressing enter will insert the selected item.
+ : Ctrl-F (command-F on OS X) will jump to the find bar.
+
+* An "About" box displays the Songbee version and the version of the XUL
+  platform.
+
+* Minor fixes:
+ : You can no longer create playlists with blank names.
+ : Updated build numbers and version numbers everywhere.
+ : The "edit playlist" page again resizes properly.
+ : Metadata attributes added to songs are forced into lower case.
+ : Right-clicking on a metadata attribute has a "delete" option in the menu. 
+ : When a song is deleted, the preview window is emptied.
+
+What's new in Songbee 2.0
+
+* Songbee not only supports songs, but is now extensible to allow display 
+  of other kinds of material: Bible passages, web sites, and so on.
+
+* Two such extensions are currently part of Songbee:
+  : If you are online, Bible passages will be displayed from the online
+    ESV. This is a proof-of-concept until we have sorted out Bible
+    licensing.
+  : You can add a web site address into a playlist and have the site appear
+    on the projector.
+
+* You can add any additional "annotations" to a song that you like - for
+  instance, the hymnal name and hymn number. Future versions will allow
+  you to search on this data.
+
+* When one song is marked as a translation of another, the option is
+  given during worship to switch between translations of the current song.
+
+* You can change the style (background, colours, etc.) of individual playlists.
+
+* The menus have been rearranged to make creating new types of material easier.
+
+* On the "edit playlist" window, you can now drag songs from the library
+  into your playlist.
+
+* Fix problem where databases were getting locked and could no longer be
+  modified.
+
+* Fix problem where the "edit playlist" window was coming up empty.
+
+* The default display now has its text nearer the top edge of the projector;
+  verse text is also centered on the screen.
